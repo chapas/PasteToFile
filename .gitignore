@@ -60,3 +60,4 @@ Thumbs.db
 *.swo
 *~
 .#*
+/STATUS.txt
