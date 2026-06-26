@@ -25,7 +25,44 @@
 
 ## Installation Methods
 
-### Method 1: Quick Installation (Recommended)
+### Method 1: Using the Windows Installer (Easiest - Recommended)
+
+#### Prerequisites
+- Download and install **Inno Setup 6** from https://jrsoftware.org/isdl.php
+- .NET 10.0 Desktop Runtime (installer will prompt if missing)
+
+#### Step 1: Build the Installer
+**Option A - Using PowerShell (Recommended):**
+```powershell
+cd C:\src\PasteToFile
+powershell -ExecutionPolicy Bypass -File build-installer.ps1
+```
+
+**Option B - Using Batch:**
+```cmd
+cd C:\src\PasteToFile
+build-installer.bat
+```
+
+#### Step 2: Run the Installer
+1. Navigate to the `Installer` folder created in the project directory
+2. Double-click `PasteToFile-Setup-1.0.0.exe`
+3. Follow the installation wizard
+4. Choose installation location (default: `C:\Program Files\PasteToFile`)
+5. Click "Install"
+
+#### Step 3: Verify Installation
+- Open Windows Explorer
+- Right-click in an empty area of any folder
+- You should see **"Paste to file"** in the context menu
+
+✅ **That's it!** The installer handles everything automatically including registry configuration.
+
+---
+
+### Method 2: Manual Quick Installation
+
+### Method 2: Manual Quick Installation
 
 #### Step 1: Build the Application
 ```powershell
@@ -52,7 +89,7 @@ dotnet publish -c Release
 
 ---
 
-### Method 2: Manual Installation (Advanced Users)
+### Method 3: Manual Installation (Advanced Users)
 
 If you prefer to manually control the installation:
 
